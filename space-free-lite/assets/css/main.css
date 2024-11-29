@@ -3174,3 +3174,33 @@ p {
 .pb-225 {
   padding-bottom: 225px;
 }
+
+
+/* Grundläggande styling för navigeringslänkar */
+.navbar-nav .nav-item .page-scroll {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333; /* Justera efter önskad färg */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .page-scroll:hover {
+  color: #007bff; /* Ändra färg vid hovring om du vill */
+}
+
+/* Understrykningseffekt */
+.navbar-nav .nav-item .page-scroll::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Avstånd mellan text och streck */
+  width: 0%;
+  height: 2px; /* Tjocklek på strecket */
+  background-color: #007bff; /* Streckets färg */
+  transition: width 0.3s ease; /* Animationseffekt */
+}
+
+.navbar-nav .nav-item .page-scroll:hover::after {
+  width: 100%; /* Gör strecket lika brett som texten vid hovring */
+}
